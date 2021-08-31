@@ -1,7 +1,8 @@
+import Dog from "./Dog";
 import Joke from "./Joke";
 
 function App() {
-  return <Joke />
+  return <Dog />
 }
 
 export default App;
