@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-interface Joke {
+interface jokeType {
   id: number;
   type: string;
   setup: string;
@@ -8,20 +8,20 @@ interface Joke {
 }
 
 function Joke() {
-  const [joke, setJoke] = useState<Joke>();
+  const [joke, setJoke] = useState<jokeType>();
 
   // const handleGetJoke = async () => {
   //   const response = await fetch(
   //     "https://official-joke-api.appspot.com/jokes/general/random"
   //   );
-  //   const jsonBody: Joke[] = await response.json();
+  //   const jsonBody: jokeType[] = await response.json();
   //   setJoke(jsonBody[0]);
   // };
 
   const handleGetJoke = () => {
     fetch("https://official-joke-api.appspot.com/jokes/general/random")
       .then((response) => response.json())
-      .then((jsonBody: Joke[]) => setJoke(jsonBody[0]));
+      .then((jsonBody: jokeType[]) => setJoke(jsonBody[0]));
   };
 
   if (joke) {

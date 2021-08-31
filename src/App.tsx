@@ -1,8 +1,7 @@
-import Dog from "./Dog";
-import Joke from "./Joke";
+import Dogs from "./Dogs";
 
 function App() {
-  return <Dog />
+  return <Dogs />
 }
 
 export default App;
